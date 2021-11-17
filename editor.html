@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p id=editor></p>
+		<script>
+			let editor=document.getElementById('editor');
+			document.body.onkeydown=function(e){
+				switch(e.key){
+					case 'Shift':
+					case 'Alt':
+					case 'OS':
+					case 'Control':
+						break;
+					case 'Backspace':
+						editor.innerText=editor.innerText.slice(0,editor.innerText.length-1)
+						break;
+					default:
+						editor.innerText+=e.key
+				}
+			}
+		</script>
+	</body>
+</html>
